@@ -19,9 +19,9 @@ def register():
         error = None
 
         if not username:
-            error = 'Username is requered.'
+            error = 'Username is required.'
         elif not password:
-            error = 'Password is requered.'
+            error = 'Password is required.'
         elif db.execute(
             'SELECT id FROM user WHERE username = ?', (username,)
         ).fetchone() is not None:
